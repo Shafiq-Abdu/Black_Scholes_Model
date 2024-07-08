@@ -155,9 +155,5 @@ $$
 Here, $\frac{\partial V}{\partial t}$ is Theta, $\frac{\partial V}{\partial S}$ is Delta, and $\frac{\partial^2 V}{\partial S^2}$ is Gamma. These Greeks help in understanding how the option price is affected by various factors and are essential for managing the risk associated with options trading.
 
 
-$$
-\frac{\partial V}{\partial t} + \frac{1}{2} \sigma^2 S^2 \frac{\partial^2 V}{\partial S^2} + r S \frac{\partial V}{\partial S} - r V = 0
-$$
-
 This PDE is used to determine the price of European call and put options by solving it with appropriate boundary conditions.
 
