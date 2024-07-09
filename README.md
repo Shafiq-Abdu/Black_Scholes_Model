@@ -199,15 +199,3 @@ $$ \phi_j(u) = \exp \{ C_j(T-t, u) + D_j(T-t, u) v_t + i u \ln S_t \} $$
 
 where $j = 1, 2$, and the functions $C_j$ and $D_j$ are derived from the Heston Model's parameters.
 
-## Python Implementation
-
-Here is a Python implementation of the Heston Model's closed-form solution for European call options:
-
-## Python Implementation
-
-Here is a Python implementation of the Heston Model's closed-form solution for European call options:
-
-
-
-This PDE is used to determine the price of European call and put options by solving it with appropriate boundary conditions.
-
