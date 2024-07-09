@@ -192,8 +192,10 @@ where:
 - $T$ is the time to maturity.
 - $r$ is the risk-free interest rate.
 - $P_1$ and $P_2$ are probabilities calculated using characteristic functions.
+  
+[Heston Model Wiki link](https://en.wikipedia.org/wiki/Heston_model)
 
-The characteristic functions $\phi_1$ and $\phi_2$ are given by:
+The characteristic function,
 
 $$ \phi_j(u) = \exp \{ C_j(T-t, u) + D_j(T-t, u) v_t + i u \ln S_t \} $$
 
