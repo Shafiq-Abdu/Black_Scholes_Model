@@ -154,6 +154,55 @@ $$
 
 Here, $\frac{\partial V}{\partial t}$ is Theta, $\frac{\partial V}{\partial S}$ is Delta, and $\frac{\partial^2 V}{\partial S^2}$ is Gamma. These Greeks help in understanding how the option price is affected by various factors and are essential for managing the risk associated with options trading.
 
+# Heston Model
+
+The Heston Model is a stochastic volatility model used to price options. Unlike the Black-Scholes model, which assumes constant volatility, the Heston Model assumes that volatility is a random process itself. This allows the model to capture the volatility smile observed in the market.
+
+## Heston Model Dynamics
+
+The Heston Model describes the dynamics of the underlying asset price \( S_t \) and its variance \( v_t \) using the following system of stochastic differential equations (SDEs):
+
+\[ 
+\begin{cases}
+dS_t = \mu S_t dt + \sqrt{v_t} S_t dW_t^S \\
+dv_t = \kappa (\theta - v_t) dt + \sigma \sqrt{v_t} dW_t^v \\
+dW_t^S dW_t^v = \rho dt
+\end{cases}
+\]
+
+where:
+- \( S_t \) is the price of the underlying asset at time \( t \).
+- \( v_t \) is the variance of the asset price at time \( t \).
+- \( \mu \) is the drift rate of the asset price.
+- \( \kappa \) is the rate at which \( v_t \) reverts to the long-term variance \( \theta \).
+- \( \theta \) is the long-term variance.
+- \( \sigma \) is the volatility of the variance process (volatility of volatility).
+- \( \rho \) is the correlation between the two Wiener processes \( W_t^S \) and \( W_t^v \).
+- \( W_t^S \) and \( W_t^v \) are two Wiener processes.
+
+## Closed-Form Solution
+
+The Heston Model has a closed-form solution for European call options, derived using characteristic functions and Fourier transform techniques. The price of a European call option can be expressed as:
+
+\[ C(S_t, K, T) = S_t P_1 - K e^{-r(T-t)} P_2 \]
+
+where:
+- \( K \) is the strike price.
+- \( T \) is the time to maturity.
+- \( r \) is the risk-free interest rate.
+- \( P_1 \) and \( P_2 \) are probabilities calculated using characteristic functions.
+
+The characteristic functions \( \phi_1 \) and \( \phi_2 \) are given by:
+
+\[ \phi_j(u) = \exp \{ C_j(T-t, u) + D_j(T-t, u) v_t + i u \ln S_t \} \]
+
+where \( j = 1, 2 \), and the functions \( C_j \) and \( D_j \) are derived from the Heston Model's parameters.
+
+## Python Implementation
+
+Here is a Python implementation of the Heston Model's closed-form solution for European call options:
+
+
 
 This PDE is used to determine the price of European call and put options by solving it with appropriate boundary conditions.
 
