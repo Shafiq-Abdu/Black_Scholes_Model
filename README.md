@@ -1,4 +1,4 @@
-
+[Refer GIT wiki for more](https://github.com/Shafiq-Abdu/Derivative_market_analysis/edit/main/README.md)
 # Black-Scholes Model
 
 ## History
